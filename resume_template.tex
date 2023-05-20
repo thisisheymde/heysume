@@ -1,0 +1,147 @@
+% heysume, a latex resume template for newbies like me to write minimal resume
+
+%packages and stuff
+\documentclass[a4paper,11pt]{article}
+\usepackage{titlesec}
+\usepackage{color} 
+\usepackage{xcolor}
+\usepackage{enumitem} 
+\usepackage{fancyhdr} 
+\usepackage{tabularx} 
+\usepackage{latexsym} 
+\usepackage[empty]{fullpage} 
+\usepackage[hidelinks]{hyperref} 
+\usepackage[normalem]{ulem} 
+\usepackage[english]{babel} 
+\usepackage[default]{sourcesanspro}
+
+%margins and styles
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0in} 
+\renewcommand{\footrulewidth}{0in} 
+\setlength{\tabcolsep}{0in} 
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textwidth}{1.0in} 
+\addtolength{\textheight}{1.0in} 
+\raggedbottom{} 
+\raggedright{} 
+
+%section mod
+\titleformat{\section}
+  {\scshape\large}{}
+    {0em}{\color{black}}[\color{black}\titlerule\vspace{0pt}]
+
+%redefine style
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%custom commands
+\newcommand{\resumeItem}[1]{
+  \item\large{#1}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeSectionType}[3]{
+  \item\begin{tabular*}{0.96\textwidth}[t]{
+    p{0.15\linewidth}p{0.02\linewidth}p{0.81\linewidth}
+  }
+    \textbf{#1} & #2 & #3
+  \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeTrioHeading}[3]{
+  \item\large{
+    \begin{tabular*}{0.96\textwidth}[t]{
+      l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r
+    }
+      \textbf{#1} & \textit{#2} & #3
+    \end{tabular*}
+  }
+}
+\newcommand{\resumeQuadHeading}[4]{
+  \item
+  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\large#3} & \textit{\large #4} \\
+  \end{tabular*}
+}
+\newcommand{\resumeHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+%top thing
+\begin{center}
+  \noindent\begin{minipage}[t]{0.5\textwidth}
+    \textbf{\Huge Your Full Name} \\
+    \textcolor{gray}{Job Title}
+    
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.4\textwidth}
+    \raggedleft
+    \begin{tabular}{@{}p{1.7cm}p{4.5cm}@{}}
+      \textbf{Location:} & Delhi, India \\
+   \textbf{Mail:} & heymde0x541@proton.me\\
+       \textbf{Github:} & @thisisheymde \\
+    \end{tabular}
+  \end{minipage}
+\end{center}
+
+%skills
+\section{Technical Skills}
+  \resumeHeadingListStart{}
+    \resumeSectionType{Languages}{:}{tech 0, tech 1, tech 2, tech 3, tech 4, tech 5}
+    \resumeSectionType{Framework}{:}{tech 0, tech 1, tech 2, tech 3, tech 4, tech 5}
+    \resumeSectionType{Databases}{:}{tech 0, tech 1, tech 2, tech 3, tech 4, tech 5}
+    \resumeSectionType{Tools}{:}{tech 0, tech 1, tech 2, tech 3, tech 4, tech 5}
+  \resumeHeadingListEnd{}
+
+%education
+\section{Education}
+  \resumeHeadingListStart{}
+    \resumeQuadHeading{The college name}{}
+    {Degree from college}{start -- end}
+  \resumeHeadingListEnd{}
+
+%Projects
+\section{Projects}
+    \resumeHeadingListStart{}  
+
+    \resumeTrioHeading{Project 1}{}{}
+    \textcolor{gray}{example.com/link-to-project}
+    \resumeItemListStart{}
+        \resumeItem{Point 1}
+        \resumeItem{Point 2}
+        \resumeItem{Point 3}
+    \resumeItemListEnd{}
+
+    \resumeTrioHeading{Project 2}{}{}
+    \textcolor{gray}{example.com/link-to-project}
+    \resumeItemListStart{}
+        \resumeItem{Point 1}
+        \resumeItem{Point 2}
+        \resumeItem{Point 3}
+    \resumeItemListEnd{}
+
+    \resumeTrioHeading{Project 3}{}{}
+    \textcolor{gray}{example.com/link-to-project}
+    \resumeItemListStart{}
+        \resumeItem{Point 1}
+        \resumeItem{Point 2}
+        \resumeItem{Point 3}
+    \resumeItemListEnd{}
+
+    \resumeHeadingListEnd{}
+
+%certs
+\section{Certifications}
+    \resumeItemListStart{}
+        \resumeItem{Certifications 1 (Website)}
+        \resumeItem{Certifications 2 (Website)}
+        \resumeItem{Certifications 3 (Website)}
+    \resumeItemListEnd{}
+
+\end{document}
